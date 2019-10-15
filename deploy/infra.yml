@@ -17,7 +17,7 @@ Parameters:
     Description: 'Use a personal access token from https://github.com/settings/tokens with "repo" and "admin:repo_hook" permissions.'
   EC2InstanceType:
     Type: String
-    Default: t3.micro
+    Default: t2.micro
     Description: 'The staging host EC2 instance type. Only tested on x86_64.'
   EC2AMI:
     Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'

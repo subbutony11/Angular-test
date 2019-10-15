@@ -10,7 +10,7 @@ phases:
 
       # install Node.js v12
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
-     
+      - npm i
   build:
     commands:
       
