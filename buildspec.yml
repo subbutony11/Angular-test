@@ -6,12 +6,12 @@ phases:
       nodejs: 10
     commands:
       - npm install
-      - npm install @angular/cli@1.2.0
+      - npm install @angular/cli
   build:
     commands:
       
       # run the build
-      - ng bulid --prod
+      - ng build --prod
 artifacts:
   files:
     # bundle everything as a build artifact, except hidden files
