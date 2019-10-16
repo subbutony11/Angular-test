@@ -1,6 +1,9 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Parameters:
+  KeyName:
+    Description: Key Pair name
+    Type: 'AWS::EC2::KeyPair::KeyName'
   GitHubOwner:
     Type: String
     Description: 'The username of the source GitHub repo.'
@@ -218,6 +221,8 @@ Resources:
       IamInstanceProfile: !Ref InstanceProfile
       ImageId: !Ref EC2AMI
       InstanceType: !Ref EC2InstanceType
+      KeyName:
+        Ref: KeyName
       SecurityGroupIds:
         - !GetAtt SecurityGroup.GroupId
       Tags:
@@ -240,6 +245,8 @@ Resources:
                   echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
                   yum update
                   yum install -y mongodb-org
+                  yum install npm
+                  yum install @angular/ci@6.0.0
                  
 
 
