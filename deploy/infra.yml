@@ -247,6 +247,7 @@ Resources:
                   yum install -y mongodb-org
                   yum install npm
                   yum install @angular/ci@6.0.0
+                  yum intall nginx -y
                  
 
 
