@@ -247,7 +247,7 @@ Resources:
                   yum install -y mongodb-org
                   yum install npm
                   npm install -g @angular/cli@6.0.0
-                  sudo amazon-linux-extras install ngnix -y
+                  yum install nginx -y
                  
 
 
